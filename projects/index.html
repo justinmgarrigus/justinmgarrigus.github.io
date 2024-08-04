@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Justin Garrigus: Projects</title>
+    <link rel="stylesheet" href="../style.css">
+    <meta name="robots" content="noindex"> 
+  </head>
+  <body style="webpage">
+	
+    <div class="main-area"> 
+      <div class="title-area"> 
+        <p class="title-text">Justin Garrigus: Projects</p>
+        <p class="subtitle-text">
+          Master's Student in Computer Science, University of North Texas
+        </p>
+      </div> 
+    
+      <div class="main-content">
+      
+        <hr style="margin-top: 0px;">
+        
+        <p class="main-text">
+          This section gives specific examples of <i>non-research</i> projects
+          I've worked on (to see the projects made specifically for research, 
+          go <a href="../research/index.html">here</a>. This page might include
+          projects I've worked on for classes, but there are several I've done 
+          only for fun (but only the best/most representative of these are
+          shown). 
+        </p> 
+        
+        <p class="main-text"> 
+          <table class="main-table"> 
+            <tr>
+              <th>Title</th>
+              <th>Date</th>
+              <th>Type</th>
+              <th>Status</th>
+            </tr>
+            <tr> 
+              <td>Arch Linux Personal Computer</td>
+              <td>January&nbsp;2024 to current</td> 
+              <td>Fun</td> 
+              <td>In progress</td>
+            </tr> 
+            <tr> 
+              <td>Computer Security: Image-based Ransomware through Buffer 
+                Overflows and Steganography</td> 
+              <td>August&nbsp;2023 to December&nbsp;2023</td> 
+              <td>School</td> 
+              <td>Complete</td>
+            </tr> 
+            <tr>
+              <td>Empirical Analysis: Study of Life-like Cellular Automata</td> 
+              <td>August&nbsp;2023 to December&nbsp;2023</td> 
+              <td>School</td>
+              <td>Complete</td> 
+            </tr>
+            <tr>
+              <td>Algorithms: Review of Classical Verification of Quantum 
+                Computations in Linear Time</td> 
+              <td>August&nbsp;2023 to December&nbsp;2023</td> 
+              <td>School</td> 
+              <td>Complete</td> 
+            </tr>
+            <tr>
+              <td>Deep Learning: Creating a Programming Language from Neural 
+                Turing Machines</td> 
+              <td>January&nbsp;2023 to May&nbsp;2023</td> 
+              <td>School</td>
+              <td>Complete</td>
+            </tr> 
+            <tr>
+              <td>Parallel Processing: Polyhedral Compilation</td> 
+              <td>January&nbsp;2023 to May&nbsp;2023</td> 
+              <td>School</td> 
+              <td>Complete</td> 
+            </tr> 
+            <tr>
+              <td>Undergraduate Thesis: Syntax as a Tool of Thought</td>
+              <td>January&nbsp;2022 to December&nbsp;2022</td>
+              <td>School</td> 
+              <td>Complete</td> 
+            </tr> 
+          </table> 
+        </p>
+
+        <hr style="margin-top: 20px; margin-bottom: 12px;"> 
+        <p class="main-text-h2">Arch Linux Personal Computer</p> 
+        <p class="main-text">Status: in progress (when is this ever <i>not</i>
+          in progress?)</p> 
+        <p class="main-text">Timeline: January 2024 to current</p>
+        <p class="main-text"> 
+          There's an adage that "Linux is free if you don't value your time", 
+          and unfortunately, this is even more so with Arch Linux. The amount
+          of work this operating system requires would suprise most people, and
+          you might take some things for granted unless you've worked in an 
+          environment with much less support compared to Windows (e.g., Zoom's 
+          annotate feature shuts off my screen if its used, and my computer has
+          a 25% chance of stalling and getting really hot whenever you try to 
+          turn it off). Although, working in Arch Linux is much more enjoyable 
+          from a programming and customization perspective; the "everything is
+          a file" design means linking disjoint processes and devices together
+          is very simple, and the open-source nature of the operating system 
+          means I can (in principle) control everything that goes on in my 
+          computer. It's fun! Although I should probably figure out a solution 
+          to that Zoom Annotation issue soon...
+        </p>
+
+        <hr style="margin-top: 20px; margin-bottom: 12px;"> 
+        <p class="main-text-h2">Computer Security: Image-based Randomware
+          through Buffer Overflows and Steganography</p> 
+        <p class="main-text">Status: complete</p> 
+        <p class="main-text">Timeline: August 2023 to December 2023</p>
+        <p class="main-text"> 
+          This was a fun project where we had to create a ransomware (in a 
+          virtual environment) that encrypted files with a hidden private key
+          and then decrypt those files at a later date. I wanted to do 
+          something weirder than a standard privilege escalation or something, 
+          so I made my own image-viewing application with a buffer overflow 
+          vulnerability in it. It would read images as "ppm" files, and would 
+          use an unbounded "strcpy" operation that would create and execute an
+          arbitrary executable file if the attacker hid binary code within the 
+          pixels of an image. It's based off of a real attack done against the
+          Korean version of a 2003 Windows operating system! Alongside this, 
+          I also wanted to manually implement RSA encryption, which involved 
+          creating my own prime-number generator in C without any external 
+          libraries.
+        </p>
+        <details> 
+          <summary class="main-text-details">Specific contributions</summary>
+          <ul class="main-text-list-indent">
+            <li>Demonstrated how a malicious image input to a vulnerable 
+              image-viewing application might lead to encryption of </li>
+          </ul> 
+        </details>
+
+        <hr style="margin-top: 20px; margin-bottom: 12px;"> 
+        <p class="main-text-h2">Empirical Analysis: Study of Life-like 
+          Cellular Automata</p> 
+        <p class="main-text">Status: complete</p> 
+        <p class="main-text">Timeline: August 2023 to December 2023</p>
+        <p class="main-text"> 
+          a
+        </p>
+        <details> 
+          <summary class="main-text-details">Specific contributions</summary>
+          <ul class="main-text-list-indent">
+            <li></li>
+          </ul> 
+        </details>
+
+        <hr style="margin-top: 20px; margin-bottom: 12px;"> 
+        <p class="main-text-h2">Algorithms: Review of Classical Verification 
+          of Quantum Computations in Linear Time</p> 
+        <p class="main-text">Status: complete</p> 
+        <p class="main-text">Timeline: August 2023 to December 2023</p>
+        <p class="main-text"> 
+          a
+        </p>
+        <details> 
+          <summary class="main-text-details">Specific contributions</summary>
+          <ul class="main-text-list-indent">
+            <li></li>
+          </ul> 
+        </details>
+
+        <hr style="margin-top: 20px; margin-bottom: 12px;"> 
+        <p class="main-text-h2">Deep Learning: Creating a Programming Language
+          from Neural Turing Machines</p> 
+        <p class="main-text">Status: complete</p> 
+        <p class="main-text">Timeline: January 2023 to May 2023</p>
+        <p class="main-text"> 
+          a
+        </p>
+        <details> 
+          <summary class="main-text-details">Specific contributions</summary>
+          <ul class="main-text-list-indent">
+            <li></li>
+          </ul> 
+        </details>
+      
+        <hr style="margin-top: 20px; margin-bottom: 12px;"> 
+        <p class="main-text-h2">Parallel Processing: Polyhedral Compilation</p> 
+        <p class="main-text">Status: complete</p> 
+        <p class="main-text">Timeline: January 2023 to May 2023</p>
+        <p class="main-text"> 
+          a
+        </p>
+        <details> 
+          <summary class="main-text-details">Specific contributions</summary>
+          <ul class="main-text-list-indent">
+            <li></li>
+          </ul> 
+        </details>
+
+        <hr style="margin-top: 20px; margin-bottom: 12px;"> 
+        <p class="main-text-h2">Undergraduate Thesis: Syntax as a Tool of 
+          Thought</p> 
+        <p class="main-text">Status: complete</p> 
+        <p class="main-text">Timeline: January 2022 to December 2022</p>
+        <p class="main-text"> 
+          a
+        </p>
+        <details> 
+          <summary class="main-text-details">Specific contributions</summary>
+          <ul class="main-text-list-indent">
+            <li></li>
+          </ul> 
+        </details>
+
+      </div>
+
+      <div class="last-updated"> 
+        <p class="last-updated-text">
+          Last updated August 4, 2024 at 10:02am CST
+       </p>
+      </div>  
+
+    </div>
+
+    <div class="sidebar">
+      <img src="../profile-pic.jpg" alt="Profile Picture" class="profile-pic">
+      <p class="sidebar-text"><a href="../index.html">Home</a></p>
+      <p class="sidebar-text"><a href="../cv/index.html">CV</a></p> 
+      <p class="sidebar-text"><a href="../research/index.html">Research</a></p>
+      <p class="sidebar-text"><a href="./index.html">Projects</a></p> 
+      <p class="sidebar-text"><a href="../teaching/index.html">Teaching</a></p> 
+      <p class="sidebar-text"><a href="../cranes/index.html">Cranes</a></p>
+    </div>
+  
+  </body>
+</html>

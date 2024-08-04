@@ -1,0 +1,158 @@
+body, html {
+    padding: 0;
+    margin: 0;
+    background-color: #F4F8F4;
+}
+
+.webpage {
+    background-color: #F4F8F4;
+}
+
+.sidebar {
+    height: 100%;
+    width: 200px;
+    background-color: #C0D7C0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+}
+
+.profile-pic { 
+    padding-left: 10%;
+    padding-right: 10%; 
+    padding-top: 10%; 
+    width: 80%; 
+}
+
+.sidebar-text {
+    font-family: "Tiems New Roman", Times, serif; 
+    color: #2A2D26;
+    font-size: 1.25em; 
+    padding-left: 10%;
+    padding-top: 10px; 
+    padding-bottom: 0;
+    margin: 0;
+}
+
+.main-area { 
+    background-color: #F4F8F4;
+    height: 100%; 
+    position: relative;
+    margin-left: 200px; 
+}
+
+.title-area {
+    background-color: #8E9F8F; 
+    position: relative;
+    top: 0;
+    margin: 0; 
+    padding: 0; 
+}
+
+.title-text { 
+    font-family: "Times New Roman", Times, serif; 
+    color: #2A2D26; 
+    font-size: 40px; 
+    padding-left: 20px; 
+    padding-top: 20px; 
+    margin: 0;
+}
+
+.subtitle-text { 
+    font-family: "Times New Roman", Times, serif; 
+    color: #464F46; 
+    font-size: 20px; 
+    padding-left: 20px; 
+    padding-top: 10px; 
+    padding-bottom: 20px;
+    margin: 0;   
+}
+
+.main-content {  
+    position: relative; 
+    top: 0; 
+    height: 100%;
+    padding-bottom: 20px; 
+}
+
+.last-updated {
+    position: relative; 
+    top: 0; 
+    padding-bottom: 20px; 
+}
+
+.main-text { 
+    font-family: "Times New Roman", Times, serif; 
+    color: #2A2D26; 
+    font-size: 20px; 
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-right: 20px;
+    margin: 0; 
+}
+
+.main-text-h2 {
+    font-family: "Times New Roman", Times, serif; 
+    color: #2A2D26; 
+    font-size: 28px; 
+    padding-left: 20px;
+    padding-right: 20px; 
+    margin: 0; 
+}
+
+.main-text-list {
+    font-family: "Times New Roman", Times, serif; 
+    color: #2A2D26; 
+    font-size: 20px; 
+    padding-left: 40px; 
+    padding-top: 10px; 
+    padding-right: 20px; 
+    margin: 0; 
+}
+
+.main-text-list-indent {
+    font-family: "Times New Roman", Times, serif; 
+    color: #2A2D26; 
+    font-size: 20px; 
+    padding-left: 60px; 
+    padding-top: 10px; 
+    padding-right: 20px; 
+    margin: 0; 
+}
+
+.main-text-details {
+    font-family: "Times New Roman", Times, serif; 
+    color: #2A2D26; 
+    font-size: 20px; 
+    padding-left: 20px; 
+    padding-top: 10px; 
+    padding-right: 20px; 
+    margin: 0; 
+}
+
+.last-updated-text { 
+    font-family: "Times New Roman", Times, serif; 
+    font-style: italic; 
+    color: #8B8B8B; 
+    font-size: 14px; 
+    padding-left: 20px; 
+    padding-top: 10px; 
+    padding-right: 20px; 
+    margin: 0; 
+}
+
+.main-table {
+    border: 1px solid black; 
+    border-collapse: collapse; 
+    padding-top: 10px; 
+    margin-left: 40px; 
+    width: calc(100% - 60px);
+}
+
+th, td, tr {
+    border-collapse: collapse; 
+    border: 1px solid black;
+    padding-left: 10px;
+    padding-right: 10px; 
+}
