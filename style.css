@@ -21,9 +21,11 @@ body, html {
 }
 
 .profile-pic { 
-    padding-left: 10%;
-    padding-right: 10%; 
-    padding-top: 10%; 
+    margin-left: 10%;
+    margin-right: 10%; 
+    margin-top: 10%;
+    border: solid black; 
+    border-width: 1px; 
     width: 80%; 
 }
 
@@ -167,4 +169,12 @@ th, td, tr {
     border: 1px solid black;
     padding-left: 10px;
     padding-right: 10px; 
+}
+
+th {
+    background-color: #BDCFBA;
+}
+
+tr { 
+    background-color: #DCE6DA;
 }
