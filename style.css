@@ -88,30 +88,29 @@ body, html {
     font-family: "Times New Roman", Times, serif; 
     color: #2A2D26; 
     font-size: 20px; 
-    padding-left: 20px;
+    padding-left: 0;
     padding-top: 10px;
-    padding-right: 20px;
     margin: 0; 
 }
 
 .main-section {
     padding-top: 14px;
-    padding-bottom: 14px; 
+    padding-bottom: 14px;
+    padding-left: 20px;
+    padding-right: 20px; 
     margin-top: 0; 
     border: solid black; 
     border-top-width: 1px;
     border-bottom-width: 0px;
     border-left-width: 0; 
     border-right-width: 0; 
-    width: 100%; 
+    width: calc(100% - 40px);
 }
 
 .main-text-h2 {
     font-family: "Times New Roman", Times, serif; 
     color: #2A2D26; 
-    font-size: 28px; 
-    padding-left: 20px;
-    padding-right: 20px; 
+    font-size: 28px;  
     margin: 0; 
 }
 
@@ -129,7 +128,7 @@ body, html {
     font-family: "Times New Roman", Times, serif; 
     color: #2A2D26; 
     font-size: 20px; 
-    padding-left: 60px; 
+    padding-left: 40px; 
     padding-top: 10px; 
     padding-right: 20px; 
     margin: 0; 
@@ -138,8 +137,7 @@ body, html {
 .main-text-details {
     font-family: "Times New Roman", Times, serif; 
     color: #2A2D26; 
-    font-size: 20px; 
-    padding-left: 20px; 
+    font-size: 20px;  
     padding-top: 10px; 
     padding-right: 20px; 
     margin: 0; 
@@ -160,8 +158,8 @@ body, html {
     border: 1px solid black; 
     border-collapse: collapse; 
     padding-top: 10px; 
-    margin-left: 40px; 
-    width: calc(100% - 60px);
+    margin-left: 20px; 
+    width: calc(100% - 40px);
 }
 
 th, td, tr {
