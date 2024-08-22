@@ -108,6 +108,7 @@ body, html {
     font-size: 40px; 
     padding-left: 20px; 
     padding-top: 20px; 
+    padding-right: 20px; 
     margin: 0;
 }
 
@@ -118,6 +119,7 @@ body, html {
     padding-left: 20px; 
     padding-top: 10px; 
     padding-bottom: 20px;
+    padding-right: 20px;
     margin: 0;   
 }
 
