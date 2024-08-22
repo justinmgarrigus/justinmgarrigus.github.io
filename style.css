@@ -42,10 +42,10 @@
         padding-top: 10px; 
         padding-bottom: 0;
         margin: 0;
-    }
-}
+    } 
+} 
 
-@media (max-width: 1000px) { /* Small screens */ 
+@media (max-width: 999px) { /* Small screens */ 
     :root { 
         --tp: 0;
     } 
@@ -67,12 +67,14 @@
     }
 
     .profile-pic-top {
-        background-image: url("media/profile-pic.jpg"); 
+        width: 100px; 
+        border: 1px solid black;
+        margin: 10px; 
     }
     
     .sidebar-text {
         display: none; 
-    }
+    } 
 }
 
 /* Everything below here is screen-size invariant. */ 
