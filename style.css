@@ -2,7 +2,7 @@
 
 @media (min-width: 1000px) { /* Large screens */ 
     :root {
-        --tp: 200px; 
+        --tp: 200px; /* Text position */  
     }
 
     .sidebar-table { 
@@ -56,6 +56,11 @@
         border-collapse: collapse;
         padding-top: 10px; 
         table-layout: auto;
+
+        th { 
+          border-left: 1px solid black; 
+          border-right: 1px solid black; 
+        } 
     }
 
     .sidebar {
