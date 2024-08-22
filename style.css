@@ -1,3 +1,82 @@
+/* Some elements depend on the screen size. */ 
+
+@media (min-width: 1000px) { /* Large screens */ 
+    :root {
+        --tp: 200px; 
+    }
+
+    .sidebar-table { 
+        display: none; 
+    }
+
+    .sidebar {
+        height: 100%;
+        width: 200px;
+        background-color: #C0D7C0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        margin: 0;
+        border-right: solid black; 
+        border-right-width: thin; 
+    }
+    
+    .profile-pic { 
+        margin-left: 10%;
+        margin-right: 10%; 
+        margin-top: 10%;
+        border: solid black; 
+        border-width: 1px; 
+        width: 80%; 
+    }
+
+    .profile-pic-top {
+        display: none; 
+    }
+    
+    .sidebar-text {
+        font-family: "Tiems New Roman", Times, serif; 
+        color: #2A2D26;
+        font-size: 1.25em; 
+        padding-left: 10%;
+        padding-top: 10px; 
+        padding-bottom: 0;
+        margin: 0;
+    }
+}
+
+@media (max-width: 1000px) { /* Small screens */ 
+    :root { 
+        --tp: 0;
+    } 
+
+    .sidebar-table {
+        width: 100%; 
+        border-top: 1px solid black;
+        border-collapse: collapse;
+        padding-top: 10px; 
+        table-layout: auto;
+    }
+
+    .sidebar {
+        display: none; 
+    }
+    
+    .profile-pic { 
+        display: none; 
+    }
+
+    .profile-pic-top {
+        background-image: url("media/profile-pic.jpg"); 
+    }
+    
+    .sidebar-text {
+        display: none; 
+    }
+}
+
+/* Everything below here is screen-size invariant. */ 
+
 body, html {
     padding: 0;
     margin: 0;
@@ -8,42 +87,11 @@ body, html {
     background-color: #F4F8F4;
 }
 
-.sidebar {
-    height: 100%;
-    width: 200px;
-    background-color: #C0D7C0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    margin: 0;
-    border-right: solid black; 
-    border-right-width: thin; 
-}
-
-.profile-pic { 
-    margin-left: 10%;
-    margin-right: 10%; 
-    margin-top: 10%;
-    border: solid black; 
-    border-width: 1px; 
-    width: 80%; 
-}
-
-.sidebar-text {
-    font-family: "Tiems New Roman", Times, serif; 
-    color: #2A2D26;
-    font-size: 1.25em; 
-    padding-left: 10%;
-    padding-top: 10px; 
-    padding-bottom: 0;
-    margin: 0;
-}
-
 .main-area { 
     background-color: #F4F8F4;
     height: 100%; 
     position: relative;
-    margin-left: 200px; 
+    margin-left: var(--tp); /* 200px; */  
 }
 
 .title-area {
@@ -162,19 +210,26 @@ body, html {
     padding-top: 10px; 
     margin-left: 20px; 
     width: calc(100% - 40px);
+
+    th, td, tr {
+        border-collapse: collapse; 
+        border: 1px solid black;
+        padding-left: 10px;
+        padding-right: 10px; 
+    }
+
+    th {
+        background-color: #BDCFBA;
+    }
+
+    tr { 
+        background-color: #DCE6DA;
+    }
 }
 
-th, td, tr {
-    border-collapse: collapse; 
-    border: 1px solid black;
-    padding-left: 10px;
-    padding-right: 10px; 
-}
-
-th {
-    background-color: #BDCFBA;
-}
-
-tr { 
-    background-color: #DCE6DA;
+.tab-history-text { 
+    font-family: "Times New Roman", Times, serif; 
+    color: #8B8B8B; 
+    font-size: 14px; 
+    margin: 0; 
 }
