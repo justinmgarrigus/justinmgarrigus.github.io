@@ -84,6 +84,20 @@
 
 /* Everything below here is screen-size invariant. */ 
 
+:target {
+    animation-name: backgroundchange; 
+    animation-duration: 5s;
+}
+
+@keyframes backgroundchange {
+    from { background-color: #D5E6B5; } 
+    to   { background-color: #F4F8F4; } 
+}
+
+:target::before {
+    background-color: #D5E6B5; 
+}
+
 body, html {
     padding: 0;
     margin: 0;
