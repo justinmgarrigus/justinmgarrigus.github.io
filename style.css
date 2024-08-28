@@ -43,6 +43,22 @@
         padding-bottom: 0;
         margin: 0;
     } 
+    
+    .main-table {
+        table-layout: auto; 
+        font-family: "Times New Roman", Times, serif; 
+        color: #2A2D26; 
+        font-size: 20px; 
+        margin-left: 20px; 
+        width: calc(100% - 40px);
+        
+        th, td, tr {        
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 10px; 
+            padding-bottom: 10px; 
+        }
+    }
 } 
 
 @media (max-width: 999px) { /* Small screens */ 
@@ -79,9 +95,43 @@
     
     .sidebar-text {
         display: none; 
-    } 
+    }
+    
+    .main-table {
+        table-layout: auto; 
+        font-family: "Times New Roman", Times, serif; 
+        color: #2A2D26; 
+        font-size: 16px; 
+        margin-left: 0px; 
+        width: 100%;
+        
+        th, td, tr { 
+            padding-left: 10px;
+            padding-right: 10px; 
+            padding-top: 10px; 
+            padding-bottom: 10px; 
+        }
+    }
 }
 
+@media (max-width: 599px) { /* Tiny screens */ 
+    .main-table {
+        table-layout: fixed; 
+        font-family: "Times New Roman", Times, serif; 
+        color: #2A2D26; 
+        font-size: 12px; 
+        margin-left: 0px; 
+        width: 100%;
+        
+        th, td, tr { 
+            padding-left: 2px;
+            padding-right: 2px; 
+            padding-top: 2px; 
+            padding-bottom: 2px; 
+        }
+    }
+}
+    
 /* Everything below here is screen-size invariant. */ 
 
 :target {
@@ -102,6 +152,7 @@ body, html {
     padding: 0;
     margin: 0;
     background-color: #F4F8F4;
+    overflow-x: hidden;
 }
 
 .webpage {
@@ -231,14 +282,10 @@ body, html {
     border: 1px solid black; 
     border-collapse: collapse; 
     padding-top: 10px; 
-    margin-left: 20px; 
-    width: calc(100% - 40px);
 
     th, td, tr {
         border-collapse: collapse; 
         border: 1px solid black;
-        padding-left: 10px;
-        padding-right: 10px; 
     }
 
     th {
