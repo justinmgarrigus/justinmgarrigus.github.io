@@ -75,110 +75,207 @@
 
         <div class="main-section"> 
           <p class="main-text-h2">Research</p> 
-          <p class="main-text">Posters</p>
+          <p class="main-text"><b>Posters</b></p>
             <ul class="main-text-list" style="list-style-type: disc;">
-              <li><a href="../research/index.html#defect-transfer">Applying 
+              <li><a href="../research/index.html#defect-transfer"><b>Applying 
                 Transfer Learning to Defect Graph Neural Networks for Defect 
-                Formation Energy Predictions</a></li>
+                Formation Energy Predictions</b></a></li>
                 <ul style="padding-top: 10px; padding-left: 20px"> 
                   <li>Graduate assistant; presenting on October 4th during 
-                    UNT's Research Day.</li>
-                  <li></li>
-                  <li></li>
+                    UNT's Research Day
+                    (<a href="../research/media/transfer-defect-poster.pdf">poster</a>, 
+                    <a href="../research/media/transfer-defect-report.pdf">
+                    report</a>, 
+                    <a href="https://github.com/justinmgarrigus/cgcnn">
+                    GitHub</a>).</li>
+                  <li>Guided two undergraduate students in UNT's Summer AI REU
+                    by holding weekly meetings and managing tasks for each 
+                    student to complete.</li>
+                  <li>Showed how transfer learning could be used to improve 
+                    the performance of a deep learning model in calculating the 
+                    defect formation energy of crystals with one atom removed.
+                    </li>
+                  <li>Used real-world reference information from physics to 
+                    identify a theoretical basis for the improvement before 
+                    implementing an improvement on an existing model.</li> 
                 </ul> 
               </li>
               <li style="padding-top: 10px;">
-                <a href="../research/index.html#image-gpu">GPU Implementations 
-                of Image Recognition Neural Network Architectures</a></li>
+                <a href="../research/index.html#image-gpu"><b>GPU 
+                Implementations of Image Recognition Neural Network 
+                Architectures</b></a></li>
                 <ul style="padding-top: 10px; padding-left: 20px"> 
                   <li>Main author; presented July 2022 during UNT's REU 
-                    Showcase.</li>
-                  <li></li>
-                  <li></li>
+                    Showcase 
+                      (<a href="../research/media/gpu-cpu-image-recognition-poster.pdf">poster</a>, 
+                      <a href="../research/media/gpu-cpu-image-recognition-report.pdf">
+                      report</a>, 
+                      <a href="https://github.com/justinmgarrigus/VGG-Simulation">
+                      GitHub</a>).</li>
+                  <li>Collaborated with another undergraduate student to show 
+                    how GPU implementations of different deep-learning 
+                    operations can lead to faster inference with a much lower
+                    overall latency compared to equivalent Python and C 
+                    versions.</li>
+                  <li>Obtained uncompressed model weights from Keras for 
+                    different deep-learning models including Alexnet, LeNet, 
+                    and VGG16, and ported those weights through a custom C 
+                    library for comparison.</li> 
+                  <li>Utilized NVIDIA tensor cores to show how 
+                    the matrix-multiplication operation can be further
+                    accelerated, including how 2d convolution can be lowered 
+                    into matrix-multiplication and accelerated the same way.
+                    </li> 
+                  <li>Crafted figures that clearly depict the performance 
+                    improvements of each method.</li>
                 </ul>
               </li> 
             </ul> 
-          <p class="main-text">Papers</p>
+          <p class="main-text"><b>Papers</b></p>
             <ul class="main-text-list" style="list-style-type: disc;">
-              <li><a href="../research/index.html#deputy-noc">Deputy NoC: A 
+              <li><a href="../research/index.html#deputy-noc"><b>Deputy NoC: A 
                 Case of Low Cost Network-on-Chip for Neural Network 
-                Accelerations on GPUs</a></li>
+                Accelerations on GPUs</b></a></li>
                 <ul style="padding-top: 10px; padding-left: 20px"> 
                   <li>Coauthor; submitted, waiting for a response from 
                     reviewers.</li>
-                  <li></li>
-                  <li></li>
+                  <li>Maintained the benchmark suite 
+                    <a href="https://github.com/justinmgarrigus/layer-simulation">
+                    GitHub</a>, adding new management utilities for simplifying
+                    bulk-processing of tests.</li> 
+                  <li>Extracted the computation graph of the YOLOv5l
+                    image-recognition model and replaced 2D convolution with a
+                    version that uses CUTLASS.</li>
+                  <li>Scraped and preprocessed the ImageNet dataset and sorted 
+                    the images into different buckets based on each baseline 
+                    model's confidence in recognizing the image classification.
+                    </li> 
                 </ul> 
               </li>
               <li style="padding-top: 10px;">
-                <a href="../research/index.html#elastic-float">Elastic-Float: 
+                <a href="../research/index.html#elastic-float"><b>Elastic-Float: 
                   Lossy Cache Compression for Cost Effective Neural Network 
-                  Acceleration</a></li>
+                  Acceleration</b></a></li>
                 <ul style="padding-top: 10px; padding-left: 20px"> 
                   <li>Coauthor; submitted, waiting for a response from 
                     reviewers.</li>
-                  <li></li>
-                  <li></li>
+                  <li>Maintained a 
+                    <a href="https://github.com/justinmgarrigus/layer-simulation">
+                    GitHub repository</a> containing the benchmark for which 
+                    the GPU modification was measured against.</li>
+                  <li>Turned popular deep-learning models including AlexNet, 
+                    ResNet, and VGG, into a computation graph of individual 
+                    operations, which allowed us to inject our own replacement
+                    operations with new functionality.</li>
+                  <li>Assisted in collecting data for figures and managing 
+                    tests to be executed on a supercomputer.</li> 
                 </ul>
               </li>
               <li style="padding-top: 10px;"> 
-                <a href="../research/index.html#genomics">Genomics-GPU: A 
-                  Benchmark Suite for GPU-accelerated Genome Analysis</a></li> 
+                <a href="../research/index.html#genomics"><b>Genomics-GPU: A 
+                  Benchmark Suite for GPU-accelerated Genome Analysis</b></a>
+                  </li> 
                 <ul style="padding-top: 10px; padding-left: 20px"> 
                   <li>Coauthor; accepted, <a href=
                     "https://ieeexplore.ieee.org/abstract/document/10158156">
                     ISPASS 2023</a></li>
-                  <li></li>
-                  <li></li> 
+                  <li>Refactored the 
+                    <a href="https://github.com/justinmgarrigus/gene-sequence-clustering-CDP">
+                    GPU gene clustering benchmark</a> to use CUDA Dynamic 
+                    Parallelism, improving the overall performance by 24.2% and
+                    allowing us to analyze the utilization of CDP in a GPU
+                    simulator.</li>
+                  <li>Organized tests that would run on the simulator and 
+                    collected data.</li> 
             </ul>
         </div>
 
         <div class="main-section"> 
           <p class="main-text-h2">Work Experience</p>
-          <p class="main-text"><b>Student Researcher</b>: August 2022 - current
+          <p class="main-text"><b><a href="../teaching/index.html#ta">Teaching 
+            Assistant</a></b>: [UNT] May 2023 - July 2023; January 2024 - 
+            current</p>
+          <ul class="main-text-list" style="list-style-type: disc;"> 
+            <li>Created assignments and labs that meet the course objectives 
+              and allow the student to demonstrate their knowledge of the 
+              subject.</li>
+            <li>Held office hours for students to request 1-on-1 tutoring on 
+              the course subject.</li>
+            <li>Led weekly recitations for each class section with 
+              personally-created lecture material to aid students in learning
+              the big-picture ideas of the course.</li>
+            <li>Graded assignments, proctored students, and assisted the 
+              professor wherever required.</li>
+            <ul class="main-text-list">
+              <li>CSCE 2610: Assembly and Computer Organization</li> 
+              <li>CSCE 3550: Foundations of Cybersecurity</li> 
+              <li>CSCE 5380: Data Mining</li> 
+              <li>CSCE 3444: Software Engineering</li>
+              <li>CSCE 4535: Network Administration</li> 
+            </ul>
+          </ul> 
+          <p class="main-text"><b><a href="../teaching/index.html#ia">
+            Instructional Assistant</a></b>: [UNT] January 2023 - May 2023; 
+            August 2023 - December 2023</p>
+          <ul class="main-text-list" style="list-style-type: disc;"> 
+            <li>Graded assignments on a regular schedule, and met with students
+              individually to justify grading decisions.</li>
+            <li>Held office hours for students to request 1-on-1 tutoring on 
+               the course subject.</li>
+            <li>Proctored students during exams and assisted the professor 
+              throughout the course whenever required.</li>
+            <ul class="main-text-list"> 
+              <li>CSCE 2610: Assembly and Computer Organization</li>
+              <li>CSCE 3530: Computer Networks</li>
+            </ul>
+          </ul> 
+          <p class="main-text"><b><a href="../research/index.html">Student 
+            Researcher</a></b>: [UNT] August 2022 - current
             </p>
           <ul class="main-text-list" style="list-style-type: disc;"> 
-            <li></li>
-            <li></li>
-            <li></li>
+            <li>Modified a GPU simulator with new microarchitectural 
+              changes that represent new kinds of GPUs that could be 
+              made to improve performance on different types of programs.</li>
+            <li>Implemented new kinds of deep-learning models, including those 
+              that utilize Large Language Models (LLMs) with formatted English
+              datasets and Graph Neural Networks (GNNs) with datasets from 
+              materials science.</li>
+            <li>Managed the execution of tests that demonstrate the effects of 
+              the research project compared to a baseline, and created figures 
+              that effectively display the data collected.</li>
+            <li>Kept up to date with the latest research in computer 
+              architecture, deep learning, and materials physics to help think 
+              of new changes that could improve on established baselines.</a> 
+            <li>Collaborated with PhD students, Master's students, 
+              undergraduate students, and professors both inside and outside of 
+              UNT.</li> 
           </ul>
-          <p class="main-text"><b>Teaching Assistant</b>: May 2023 - July 2023;
-            January 2024 - current</p>
+          <p class="main-text"><b><a href="../research/index.html#image-gpu">
+            NSF/UNT Deep Learning REU</a></b>: May 2022 - July 2022</p>
           <ul class="main-text-list" style="list-style-type: disc;"> 
-            <li></li>
-            <li></li>
-            <li></li>
-            <li><ul class="main-text-list">
-              <li></li>
-              <li></li>
-              <li></li>
-            </ul></li>
+            <li>Showed how utilizing GPUs for deep-learning workloads leads to 
+              massive improvements in performance. 
+              (<a href="../research/media/gpu-cpu-image-recognition-poster.pdf">poster</a>, 
+              <a href="../research/media/gpu-cpu-image-recognition-report.pdf">
+              report</a>, 
+              <a href="https://github.com/justinmgarrigus/VGG-Simulation">
+              GitHub</a>).</li>
+            <li>Presented the results of the project to an audience, 
+              justifying the motivation for the project, the history of using 
+              GPUs in deep learning, and explanations for the results.
+            <li>Learned how to successfully complete a research project with 
+              the help of graduate students and professors.</li>
           </ul>
-          <p class="main-text"><b>Instructional Assistant</b>: January 2023 - 
-            May 2023; August 2023 - December 2023</p>
+          <p class="main-text"><b><a href="../teaching/index.html#tutor">Online 
+            Private Lessons Instructor</a></b>: 
+            [<a href="https://www.idtech.com/">iD Tech</a>] January 2021 - June 
+            2022</p>
           <ul class="main-text-list" style="list-style-type: disc;"> 
-            <li></li>
-            <li></li>
-            <li></li>
-            <li><ul class="main-text-list">
-              <li></li>
-              <li></li>
-              <li></li>
-            </ul></li>
-          </ul>
-          <p class="main-text"><b>NSF/UNT Deep Learning REU</b>: 
-            May 2022 - July 2022</p>
-          <ul class="main-text-list" style="list-style-type: disc;"> 
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>
-          <p class="main-text"><b>Online Private Lessons Instructor</b>: 
-            January 2021 - June 2022</p>
-          <ul class="main-text-list" style="list-style-type: disc;"> 
-            <li></li>
-            <li></li>
-            <li></li>
+            <li>Taught over 600 private lessons to students in Algebra, 
+              Geometry, Calculus, Game Programming, Data Structures, and 
+              Algorithms.</li>
+            <li>Helped students complete long-term projects, meeting regularly
+              to assist in solving complex, domain-specific problems.</li>
           </ul>
         </div>
 
@@ -191,10 +288,10 @@
                 Thesis</a></li>
               <li>CSCE 5610: Computer Architecture</li>
               <li>CSCE 5218: Deep Learning</li> 
-              <li>CSCE 5160: Parallel Processing</li>
-              <li>CSCE 5150: Analysis of Computer Algorithms</li>
+              <li>CSCE 5160: Parallel Processing</li> 
               <li>CSCE 4999: <a href="../projects/index.html#thesis">Senior 
                 Thesis</a></li>
+              <li>CSCE 4290: Natural Language Processing</li>
             </ul>
             <details> 
               <summary class="main-text-details">Extended Summary</summary>
@@ -240,6 +337,8 @@
                   <li>C++</li> 
                   <li>CUDA</li> 
                   <li>GPGPU-Sim</li>
+                  <li><a href="https://tacc.utexas.edu/systems/lonestar6/">
+                    TACC/Lonestar6 Supercomputer</a></li>
                   <li>Linux (Ubuntu, <a href="../projects/index.html#arch">
                     Arch</a>, Ubuntu Server)</li> 
                   <li>Python</li> 
