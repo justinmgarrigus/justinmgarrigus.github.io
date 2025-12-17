@@ -1,10 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+    <script>
+    fetch("config.json")
+      .then(r => r.json())
+      .then(cfg => {
+        document.getElementById("fullName").textContent = cfg.fullName;
+        document.getElementById("firstName").textContent = cfg.firstName;
+      }); 
+    </script>  
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Justin Garrigus: Home</title>
+    <title>Home</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="icon" type="image/x-icon" href="media/icon.ico">
   </head>
@@ -16,11 +24,10 @@
           <img src="media/profile-pic.jpg" class="profile-pic-top">
         </div>
         <div style="width: calc(100% - 120px);">
-          <p class="title-text">Justin Garrigus</p>
+          <p class="title-text"><span id="fullName"></span></p>
           <p class="subtitle-text">
-            Software Engineering Specialist, xAI<br>
-            Master's in Computer Science, University of North Texas<br>
-            GPU Microarchitecture and Deep Learning
+            Research Associate Intern, AMD<br>
+            PhD Student in Computer Architecture, UT Austin
           </p> 
         </div>  
       </div>
@@ -42,7 +49,7 @@
       <div class="main-content">
         <div class="main-section">
           <p class="main-text"> 
-            Hello! My name is Justin. I'm a computer science student and 
+            Hello! My name is <span id="firstName"></span>. I'm a computer science student and 
             teaching assistant at UNT currently studying <b>computer 
             microarchitecture</b>. My <a 
             href="./research/media/master-thesis.pdf">thesis</a> is about 
@@ -99,7 +106,7 @@
             including as a private tutor, instructional assistant, and teaching 
             assistant. Besides computers, I like to spend my free time 
             <a href="./cranes/index.html">folding cranes</a> and reading. Feel 
-            free to contact me at <b>justingarrigus@my.unt.edu</b> about 
+            free to contact me at <b>justingarrigus@utexas.edu</b> about 
             inquiries.
           </p>
 
@@ -108,7 +115,7 @@
     
       <div class="last-updated"> 
         <p class="last-updated-text">
-          Last updated December 17, 2024 at 9:30am CST
+          Last updated December 17, 2025 at 3:04pm CST
        </p>
       </div>
 
@@ -136,6 +143,5 @@
         <img src="media/bullets/6.png", style="height: 1em">
         <a href="./cranes/index.html">Cranes</a></p>
     </div>
-  
   </body>
 </html>
