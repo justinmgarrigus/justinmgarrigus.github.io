@@ -1,147 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-    <script>
+  <script>
     fetch("config.json")
       .then(r => r.json())
       .then(cfg => {
-        document.getElementById("fullName").textContent = cfg.fullName;
-        document.getElementById("firstName").textContent = cfg.firstName;
+        var elements = document.getElementsByClassName("fullName");
+        for (var i = 0; i < elements.length; i++) {
+          elements[i].textContent = cfg.fullName;
+        }
+        elements = document.getElementsByClassName("firstName");
+        for (var i = 0; i < elements.length; i++) {
+          elements[i].textContent = cfg.firstName;
+        } 
       }); 
-    </script>  
+  </script>  
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Home</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="/style-sidebar.css">
     <link rel="icon" type="image/x-icon" href="media/icon.ico">
   </head>
-  <body style="webpage">
-	
-    <div class="main-area"> 
-      <div class="title-area">  
-        <div style="width: 120px; float: right;"> 
-          <img src="media/profile-pic.jpg" class="profile-pic-top">
-        </div>
-        <div style="width: calc(100% - 120px);">
-          <p class="title-text"><span id="fullName"></span></p>
-          <p class="subtitle-text">
-            Research Associate Intern, AMD<br>
-            PhD Student in Computer Architecture, UT Austin
-          </p> 
-        </div>  
+  <body class="webpage" style="height: 100vh;">
+    
+    <div class="sidebar">
+      <div class="sidebar-text-area">
+        <img id="pfp" src="/media/profile-pic.jpg" alt="Picture of me." style="max-width: 100%;">
       </div>
-      <div class="title-area"> 
-        <table class="sidebar-table"> 
+      <div class="sidebar-text-area">
+        <p class="sidebar-text">Hello</p>
+      </div>
+    </div>
+
+    <div class="main-area" style="display: flex; flex-direction: column; overflow: hidden;">
+      <div class="title-area">
+        <p class="title-text"><span class="fullName"></span></p>
+        <p class="subtitle-text">
+          Research Associate Intern, AMD<br>
+          PhD Student in Computer Architecture, UT Austin
+        </p> 
+      </div>
+      <div class="topbar"> 
+        <table class="topbar-table"> 
           <tr>
             <th style="border-left: 0;">
-              <a href="./index.html">Home</a></th>
-            <th><a href="./cv/index.html">CV</a></th>
-            <th><a href="./research/index.html">Research</a></th>
-            <th><a href="./projects/index.html">Projects</a></th>
-            <th><a href="./teaching/index.html">Teaching</a></th>
-            <th style="border-right: 0;">
-              <a href="./cranes/index.html">Cranes</a></th> 
-          </tr>
+              <p class="sidebar-text">Hi</p>
+            </th>
+          </tr> 
         </table>
-      </div> 
-    
-      <div class="main-content">
-        <div class="main-section">
-          <p class="main-text"> 
-            Hello! My name is <span id="firstName"></span>. I'm a computer science student and 
-            teaching assistant at UNT currently studying <b>computer 
-            microarchitecture</b>. My <a 
-            href="./research/media/master-thesis.pdf">thesis</a> is about 
-            reducing the amount of duplicated values in the GPU L2 cache for 
-            GEMM-based 2D convolution by utilizing a smarter cache mapping 
-            function with a side-cache holding extra metadata. This will allow 
-            us to reduce the size of the cache without reducing performance!
-          </p>
-  
-          <p class="main-text"> 
-            Besides that, I'm also interested in other broad kinds of 
-            microarchitecture research. The types of problems I like to solve 
-            are creating brand-new computers that are really good at solving 
-            domain-specific problems. Small-scale problems (e.g., targetting a 
-            specific part of the computer like the L2 cache) are familiar to 
-            me, but I really want to branch out towards <b>full-system 
-            architecture</b> by changing many different parts of the computer 
-            all at once in brand-new ways! I want to work on 
-            projects that completely change the way computers operate!
-          </p>
-  
-          <p class="main-text"> 
-            My current work at UNT with GPUs looks like this: 
-          </p> 
-  
-          <ul class="main-text-list">
-            <li>Propose changes that can be made to some part of the GPU
-              microarchitecture.</li> 
-            <li>Modify the source code of <a href="http://www.gpgpu-sim.org/">
-              GPGPU-Sim</a> to reflect this change.</li> 
-            <li>Create benchmarks to run on the simulator that demonstrate the 
-              benefits and downsides of my changes.</li> 
-            <li>Construct figures that show what happens when different key 
-              components of the architecture is changed on these benchmarks 
-              (e.g., "how does the speed/memory accesses/hit rate change when 
-              the number of LSHRs/registers/L1 size changes?").</li>
-          </ul>
- 
-          <p class="main-text"> 
-            I'm currently applying to PhD programs for Fall 2025 or Spring 
-            2026, but my day-job is to work as a software engineer at xAI. My
-            job mainly consists of creating software that X's LLM, Grok, can
-            use to improve in performance. Outside of work, I'm researching GPU 
-            computer architecture for accelerating deep learning applications.
-          </p>
-
-          <p class="main-text"> 
-            Click the sidebar to see my <a href="./cv/index.html">CV</a> (and 
-            a more-condenced <a href="./cv/resume.pdf">resume</a>) along with 
-            specific examples of my 
-            <a href="./research/index.html">research</a> and 
-            <a href="./projects/index.html">other projects</a>. You can also 
-            find my experience <a href-"./teaching/index.html">teaching</a>, 
-            including as a private tutor, instructional assistant, and teaching 
-            assistant. Besides computers, I like to spend my free time 
-            <a href="./cranes/index.html">folding cranes</a> and reading. Feel 
-            free to contact me at <b>justingarrigus@utexas.edu</b> about 
-            inquiries.
-          </p>
-
-        </div> 
       </div>
-    
-      <div class="last-updated"> 
-        <p class="last-updated-text">
-          Last updated December 17, 2025 at 3:04pm CST
-       </p>
+      <div style="flex-grow: 1;">
+        <iframe id="content" style="width: 100%; height: 100%; border: none; overflow: hidden;"></iframe>
       </div>
-
-    </div> 
-
-    <div class="sidebar">
-      <img src="media/profile-pic.jpg" alt="Profile Picture" 
-        class="profile-pic">
-      <p class="sidebar-text">
-        <img src="media/bullets/1.png", style="height: 1em">
-        <a href="./index.html">Home</a></p>
-      <p class="sidebar-text">
-        <img src="media/bullets/2.png", style="height: 1em">
-        <a href="./cv/index.html">CV</a></p>
-      <p class="sidebar-text">
-        <img src="media/bullets/3.png", style="height: 1em">
-        <a href="./research/index.html">Research</a></p>
-      <p class="sidebar-text">
-        <img src="media/bullets/4.png", style="height: 1em">
-        <a href="./projects/index.html">Projects</a></p> 
-      <p class="sidebar-text">
-        <img src="media/bullets/5.png", style="height: 1em">
-        <a href="./teaching/index.html">Teaching</a></p> 
-      <p class="sidebar-text">
-        <img src="media/bullets/6.png", style="height: 1em">
-        <a href="./cranes/index.html">Cranes</a></p>
     </div>
+
+    <script> 
+      const page = new URLSearchParams(window.location.search).get("page") || "main";
+      const content = document.getElementById("content"); 
+      content.src = `${page}.html`;
+    </script>
+      
   </body>
 </html>
