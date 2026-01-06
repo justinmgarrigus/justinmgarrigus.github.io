@@ -71,8 +71,15 @@ for line in markdown:
     while mat := link_reg.match(line): 
         text = mat[1][1:-1]
         link = mat[2][1:-1]
-        line = line[:mat.start(1)] + f"<a href=\"{link}\">{text}</a>" \
+        target = (
+            "_self" if link.startswith("/") and not link.endswith(".pdf")
+            else "_parent"
+        )
+        line = (
+            line[:mat.start(1)] 
+            + f"<a href=\"{link}\" target=\"{target}\">{text}</a>"
             + line[mat.end(2):]
+        )
 
     while "{{first_name}}" in line:
         line = line.replace("{{first_name}}", 
