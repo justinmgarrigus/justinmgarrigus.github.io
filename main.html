@@ -1,19 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-  <script>
-    fetch("config.json")
-      .then(r => r.json())
-      .then(cfg => {
-        var elements = document.getElementsByClassName("fullName");
-        for (var i = 0; i < elements.length; i++) {
-          elements[i].textContent = cfg.fullName;
-        }
-        elements = document.getElementsByClassName("firstName");
-        for (var i = 0; i < elements.length; i++) {
-          elements[i].textContent = cfg.firstName;
-        } 
-      }); 
-  </script>  
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,73 +7,42 @@
     <link rel="stylesheet" href="/style-content.css">
   </head>
   <body class="webpage">
+    <script>
+      fetch("config.json")
+        .then(r => r.json())
+        .then(cfg => {
+          console.log("Here");
+          var elements = document.getElementsByClassName("fullName");
+          for (var i = 0; i < elements.length; i++) {
+            elements[i].textContent = cfg.fullName;
+          }
+          elements = document.getElementsByClassName("firstName");
+          console.log("Length = " + elements.length); 
+          for (var i = 0; i < elements.length; i++) {
+            console.log("Replaced."); 
+            elements[i].textContent = cfg.firstName;
+          } 
+        }); 
+    </script>
     <div class="main-content">
       <div class="main-section">
-        <p class="main-text"> 
-          Hello! My name is <span id="firstName"></span>. I'm a computer science student and 
-          teaching assistant at UNT currently studying <b>computer 
-          microarchitecture</b>. My <a 
-          href="./research/media/master-thesis.pdf">thesis</a> is about 
-          reducing the amount of duplicated values in the GPU L2 cache for 
-          GEMM-based 2D convolution by utilizing a smarter cache mapping 
-          function with a side-cache holding extra metadata. This will allow 
-          us to reduce the size of the cache without reducing performance!
-        </p>
+        <h3>Overview</h3>
+        <p>My research focus is on computer architecture and creating new hardware systems that need to be programmed and compiled in unique ways. I'm currently working on projects in GPUs, CPUs, and FPGAs with my advisor Dr. Lizy John. Between January and August 2026, I'll be working as a Research Associate Intern at AMD developing scale-up/scale-out GPU systems.</p>
+        <h3>News</h3>
+        <table><tr><td>January 2025</td><td>Started working as a Research Associate Intern at AMD</td></tr>
+        <tr><td>August 2025</td><td>First day of PhD at UT Austin</td></tr>
+        <tr><td>December 2025</td><td>Graduated from UNT with my Master's degree</td></tr>
+        <tr><td>November 2025</td><td>Successfully defended my Master's thesis</td></tr>
+        <tr><td>January 2024</td><td>First day of Master's at UNT</td></tr>
+        </table><h3>Introduction</h3>
+        <p>Hello! My name is <span class="firstName"></span>. I'm a PhD student at the University of Texas at Austin currently studying computer architecture. My advisor is <a href="https://scholar.google.com/citations?user=YPu9rWUAAAAJ&hl=en&oi=ao">Dr. Lizy Kurian John</a>, and my work is with the <a href="https://lca.ece.utexas.edu/">Laboratory of Computer Architecture</a>. During Spring/Summer 2026, I'm working with AMD as a research associate intern developing scale-up/scale-out GPU systems.</p>
+        <p>I'm interested in developing exciting things in computer architecture, which makes my research difficult to specify in concrete terms. I want my dissertation to consist of vary different kinds of projects without any kind of throughline, because there are too many interesting things happening in this field to narrow down on any single topic. However, my current projects are focused on adding <i>new instructions</i> to hardware systems, which involves connecting computer microarchitecture, processor/memory systems, software optimization, compilers, and more together.</p>
+        <p>My <a href="/research/media/master-thesis.pdf">Master's thesis</a> is (1) an exploration of deep-learning compilers, (2) an L2-cache microarchitecture for reducing duplicated values in lowered im2col convolution, and (3) an analysis of distributed GPU systems evaluating LLM workloads, and was advised by <a href="https://scholar.google.com/citations?user=7DVxrRoAAAAJ&hl=en">Dr. Hui Zhao</a> at the University of North Texas. My <a href="/projects/media/senior-thesis.pdf">Bachelor's thesis</a> is a detailed investigation of programming languages, syntax vs. semantics, and the introduction of a custom programming language maximizing expressibility of any programming problem, advised by <a href="https://scholar.google.com/citations?user=hMCK39sAAAAJ&hl=en">Dr. Barrett Bryant</a>.</p>
+        <p>My full CV can be found <a href="/cv/index.html">here</a>. You can contact me at justingarrigus@utexas.edu.</p>
 
-        <p class="main-text"> 
-          Besides that, I'm also interested in other broad kinds of 
-          microarchitecture research. The types of problems I like to solve 
-          are creating brand-new computers that are really good at solving 
-          domain-specific problems. Small-scale problems (e.g., targetting a 
-          specific part of the computer like the L2 cache) are familiar to 
-          me, but I really want to branch out towards <b>full-system 
-          architecture</b> by changing many different parts of the computer 
-          all at once in brand-new ways! I want to work on 
-          projects that completely change the way computers operate!
-        </p>
-
-        <p class="main-text"> 
-          My current work at UNT with GPUs looks like this: 
-        </p> 
-
-        <ul class="main-text-list">
-          <li>Propose changes that can be made to some part of the GPU
-            microarchitecture.</li> 
-          <li>Modify the source code of <a href="http://www.gpgpu-sim.org/">
-            GPGPU-Sim</a> to reflect this change.</li> 
-          <li>Create benchmarks to run on the simulator that demonstrate the 
-            benefits and downsides of my changes.</li> 
-          <li>Construct figures that show what happens when different key 
-            components of the architecture is changed on these benchmarks 
-            (e.g., "how does the speed/memory accesses/hit rate change when 
-            the number of LSHRs/registers/L1 size changes?").</li>
-        </ul>
- 
-        <p class="main-text"> 
-          I'm currently applying to PhD programs for Fall 2025 or Spring 
-          2026, but my day-job is to work as a software engineer at xAI. My
-          job mainly consists of creating software that X's LLM, Grok, can
-          use to improve in performance. Outside of work, I'm researching GPU 
-          computer architecture for accelerating deep learning applications.
-        </p>
-
-        <p class="main-text"> 
-          Click the sidebar to see my <a href="./cv/index.html">CV</a> (and 
-          a more-condenced <a href="./cv/resume.pdf">resume</a>) along with 
-          specific examples of my 
-          <a href="./research/index.html">research</a> and 
-          <a href="./projects/index.html">other projects</a>. You can also 
-          find my experience <a href-"./teaching/index.html">teaching</a>, 
-          including as a private tutor, instructional assistant, and teaching 
-          assistant. Besides computers, I like to spend my free time 
-          <a href="./cranes/index.html">folding cranes</a> and reading. Feel 
-          free to contact me at <b>justingarrigus@utexas.edu</b> about 
-          inquiries.
-        </p>
-    
         <div class="last-updated"> 
           <p class="last-updated-text">
-            Last updated December 17, 2025 at 3:04pm CST
+            Last updated January 06, 2026 at 1:52PM CST
           </p>
         </div>
 
@@ -95,3 +50,4 @@
     </div>
   </body>
 </html>
+
