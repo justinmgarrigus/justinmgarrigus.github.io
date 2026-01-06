@@ -53,6 +53,7 @@ bold_reg = re.compile(r".*(\*\*[^\*]+\*\*).*")
 link_reg = re.compile(r".*(\[[^\]]+\])(\([^\)]+\)).*")
 reading_table = False 
 table_cols = None 
+lines_written = 0 
 for line in markdown:
     if len(line) == 0: 
         continue 
@@ -99,7 +100,8 @@ for line in markdown:
             html += "</table>" 
     elif line.startswith("##"):
         line = line[2:].strip()
-        line = "<h3>" + line + "</h3>"
+        style = " style=\"padding-top: 10px;\"" if lines_written == 0 else ""
+        line = f"<h3{style}>" + line + "</h3>"
         if reading_table:
             reading_table = False
             table_cols = None 
