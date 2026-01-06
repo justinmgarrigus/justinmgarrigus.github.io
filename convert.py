@@ -129,6 +129,7 @@ for line in markdown:
         line = "<p>" + line + "</p>"
     
     html += line + "\n"
+    lines_written += 1 
 
 timezone = pytz.timezone("US/Central") 
 now = datetime.now(timezone) 
