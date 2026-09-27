@@ -1,65 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-  <script>
-    fetch("config.json")
-      .then(r => r.json())
-      .then(cfg => {
-        var elements = document.getElementsByClassName("fullName");
-        for (var i = 0; i < elements.length; i++) {
-          elements[i].textContent = cfg.fullName;
-        }
-        elements = document.getElementsByClassName("firstName");
-        for (var i = 0; i < elements.length; i++) {
-          elements[i].textContent = cfg.firstName;
-        } 
-      }); 
-  </script>  
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Home</title>
-    <link rel="stylesheet" href="/style-sidebar.css">
-    <link rel="icon" type="image/x-icon" href="media/icon.ico">
-  </head>
-  <body class="webpage" style="height: 100vh;">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Justin Garrigus</title>
+  <meta name="description" content="Justin Garrigus: PhD student in computer architecture at UT Austin.">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/theme/style.css">
+  <style>:root{--bg:#f7d1cd;--bg-2:#e8c2ca;--panel:#fffaf6;--accent:#735d78;--accent-2:#b392ac;--accent-ink:#f7d1cd;} </style>
+  <!-- Applied before first paint so calm mode never flashes animations. -->
+  <script>try{if(localStorage.getItem("calm")==="1")document.documentElement.classList.add("calm")}catch(e){}</script>
+  <script src="/theme/sparkle.js" defer data-trail="true" data-new-months="3"></script>
+</head>
+<body class="page-home">
+<a class="skip" href="#main">Skip to content</a>
+<div class="page">
+
+  <header class="banner">
+    <div class="site-title rainbow"><a href="/">Justin Garrigus</a></div>
+    <div class="tagline">PhD Student in Electrical Engineering, UT Austin
+</div>
+    <p class="site-updated">Updated <time datetime="2026-09-27">September 27, 2026</time></p>
+  </header>
+
+  <nav class="nav" aria-label="Site"><ul><li><a href="/" aria-current="page"><img src="/gifs/globe.gif" alt="" class="nav-icon" loading="lazy">Home</a></li><li><a href="/research/"><img src="/gifs/book.gif" alt="" class="nav-icon" loading="lazy">Research</a></li><li><a href="/cv/resume.pdf"><img src="/gifs/bird.gif" alt="" class="nav-icon" loading="lazy">CV (PDF)</a></li></ul></nav>
+
+  <main id="main" class="window">
     
-    <div class="sidebar">
-      <div class="sidebar-text-area">
-        <img id="pfp" src="/media/profile-pic.jpg" alt="Picture of me." style="max-width: 100%;">
-      </div>
-      <div class="sidebar-text-area">
-        <p class="sidebar-text">Hello</p>
-      </div>
-    </div>
+    <div class="marquee" style="--marquee-speed:18s"><div class="marquee-inner">
+<p>Welcome to my corner of the web!   ★   Now working on GPUs at AMD   ★   Sign my guestbook… once I build one</p>
+</div></div>
+<h2 class="blink-colors" id="overview">Overview</h2>
+<p>My research focus is on computer architecture and creating new hardware
+systems that need to be programmed and compiled in unique ways. I’m currently
+working on projects in GPUs, CPUs, and FPGAs with my advisor Dr. Lizy John.
+Between January and August 2026, I’ll be working as a Research Associate Intern
+at AMD developing scale-up/scale-out GPU systems.</p>
+<h2 id="news">News <span class="new-if-recent" data-date="2026-01-01"></span></h2>
+<table class="news"><tr><td class="news-date"><time datetime="2026-01-01">January 2026</time></td><td>Started working as a Research Associate Intern at AMD <span class="new-if-recent" data-date="2026-01-01"></span></td></tr><tr><td class="news-date"><time datetime="2025-12-01">December 2025</time></td><td>Graduated from UNT with my Master’s degree <span class="new-if-recent" data-date="2025-12-01"></span></td></tr><tr><td class="news-date"><time datetime="2025-11-01">November 2025</time></td><td>Successfully defended my <a href="/research/media/master-thesis.pdf">Master’s thesis</a> <span class="new-if-recent" data-date="2025-11-01"></span></td></tr><tr><td class="news-date"><time datetime="2025-08-01">August 2025</time></td><td>First day of PhD at UT Austin <span class="new-if-recent" data-date="2025-08-01"></span></td></tr><tr><td class="news-date"><time datetime="2024-01-01">January 2024</time></td><td>First day of Master’s at UNT <span class="new-if-recent" data-date="2024-01-01"></span></td></tr></table>
+<h2 id="introduction">Introduction</h2>
+<p>Hello! My name is Justin. I’m a PhD student at the University of Texas at
+Austin currently studying computer architecture. My advisor is
+<a href="https://scholar.google.com/citations?user=YPu9rWUAAAAJ&amp;hl=en&amp;oi=ao">Dr. Lizy Kurian John</a>,
+and my work is with the
+<a href="https://lca.ece.utexas.edu/">Laboratory of Computer Architecture</a>. During
+Spring/Summer 2026, I’m working with AMD as a research associate intern
+developing scale-up/scale-out GPU systems.</p>
+<p>I’m interested in developing exciting things in computer architecture, which
+makes my research difficult to specify in concrete terms. I want my
+dissertation to consist of very different kinds of projects without any kind
+of throughline, because there are too many interesting things happening in
+this field to narrow down on any single topic. However, my current projects are
+focused on adding <em>new instructions</em> to hardware systems, which involves
+connecting computer microarchitecture, processor/memory systems, software
+optimization, compilers, and more together.</p>
+<p>My <a href="/research/media/master-thesis.pdf">Master’s thesis</a> is (1) an exploration
+of deep-learning compilers, (2) an L2-cache microarchitecture for reducing
+duplicated values in lowered im2col convolution, and (3) an analysis of
+distributed GPU systems evaluating LLM workloads, and was advised by
+<a href="https://scholar.google.com/citations?user=7DVxrRoAAAAJ&amp;hl=en">Dr. Hui Zhao</a> at
+the University of North Texas. My
+<a href="/projects/media/senior-thesis.pdf">Bachelor’s thesis</a> is a detailed
+investigation of programming languages, syntax vs. semantics, and the
+introduction of a custom programming language maximizing expressibility of any
+programming problem, advised by
+<a href="https://scholar.google.com/citations?user=hMCK39sAAAAJ&amp;hl=en">Dr. Barrett Bryant</a>.</p>
+<p>My full CV can be found <a href="/cv/resume.pdf">here</a>. You can contact me at
+justingarrigus@utexas.edu.</p>
 
-    <div class="main-area" style="display: flex; flex-direction: column; overflow: hidden;">
-      <div class="title-area">
-        <p class="title-text"><span class="fullName"></span></p>
-        <p class="subtitle-text">
-          Research Associate Intern, AMD<br>
-          PhD Student in Computer Architecture, UT Austin
-        </p> 
-      </div>
-      <div class="topbar"> 
-        <table class="topbar-table"> 
-          <tr>
-            <th style="border-left: 0;">
-              <p class="sidebar-text">Hi</p>
-            </th>
-          </tr> 
-        </table>
-      </div>
-      <div style="flex-grow: 1;">
-        <iframe id="content" style="width: 100%; height: 100%; border: none; overflow: hidden;"></iframe>
-      </div>
-    </div>
+    <p class="page-updated">This page last updated September 27, 2026</p>
+  </main>
 
-    <script> 
-      const page = new URLSearchParams(window.location.search).get("page") || "main";
-      const content = document.getElementById("content"); 
-      content.src = `${page}.html`;
-    </script>
-      
-  </body>
+  <aside class="sidebar"><p><img src="/media/profile-pic.jpg" alt="Picture of me" /></p>
+<p><strong>Welcome to my homepage!</strong></p>
+<p>Visitors:
+<span class="blink-colors"> <strong><span class="visitor-counter" data-start="2026-01-01" data-per-day="100">&infin;</span></strong> </span></p>
+</aside>
+
+  <footer class="footer">
+    <div class="gif-hr"><img src="/gifs/divider.gif" alt="" class="gif" loading="lazy"></div>
+
+    <button type="button" id="calm-toggle" class="bevel-button" aria-pressed="false">
+      Reduce movement
+    </button>
+  </footer>
+
+</div>
+</body>
 </html>
